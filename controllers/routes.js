@@ -9,4 +9,13 @@ router.get('/', function(req,res){
     })
  })
 
+ // this code is broken
+ router.put('/burgers/update/:id', function(req, res){
+   burger.update(req.body.burger_id, function(result){
+     console.log(result);
+     res.redirect('/');
+   });
+ });
+
+
   module.exports = router;
