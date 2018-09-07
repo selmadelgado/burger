@@ -10,9 +10,14 @@ var burger = {
     })
   },
 
-  // Devour a burger
+  // Devour a burger - this code is broken
   update: function(id, cb){
     orm.update('burgers', id, cb);
+  },
+
+  // Create burger
+  create: function(name, cb){
+    orm.create('burgers', name, cb)
   }
 }
 
