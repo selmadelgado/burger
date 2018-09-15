@@ -5,10 +5,16 @@ var exphbs = require('express-handlebars');
 
 var app = express();
 app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(bodyParser.urlencoded({ 
+    extended: false 
+}));
+
 app.use(methodOverride('_method'));
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.engine('handlebars', exphbs({ 
+    defaultLayout: 'main' 
+}));
 
 app.set('view engine', 'handlebars');
 
